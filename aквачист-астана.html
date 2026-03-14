@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>АкваЧист — Фильтры для воды в Астане | Установка и продажа</title>
+<meta name="description" content="Продажа и установка фильтров для воды в Астане. Гарантия 2 года. Установка за 1 день. Бесплатное обслуживание. Звоните: +7 (700) 000-00-00">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --blue: #1565C0;
+  --blue-dark: #0D47A1;
+  --blue-light: #1976D2;
+  --sky: #E3F2FD;
+  --accent: #00BCD4;
+  --accent2: #0097A7;
+  --text: #1a1a2e;
+  --gray: #607D8B;
+  --light: #F5F9FF;
+  --white: #ffffff;
+  --border: #e0e9f5;
+  --green: #2E7D32;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+/* ── TOP BAR ── */
+.topbar {
+  background: var(--blue-dark);
+  color: rgba(255,255,255,.8);
+  font-size: .8rem;
+  padding: 8px 0;
+  text-align: center;
+  letter-spacing: .03em;
+}
+.topbar span { color: var(--accent); font-weight: 600; }
+
+/* ── NAV ── */
+nav {
+  background: var(--white);
+  border-bottom: 2px solid var(--border);
+  position: sticky; top: 0; z-index: 200;
+  box-shadow: 0 2px 20px rgba(21,101,192,.08);
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px; height: 72px;
+}
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem; font-weight: 900;
+  color: var(--blue-dark);
+  text-decoration: none; letter-spacing: -.02em;
+  display: flex; align-items: center; gap: 10px;
+}
+.logo-icon {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--blue), var(--accent));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+}
+.logo span { color: var(--accent); }
+
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a {
+  font-size: .88rem; font-weight: 500; color: var(--gray);
+  text-decoration: none; transition: color .2s;
+  padding: 4px 0; border-bottom: 2px solid transparent; transition: .2s;
+}
+.nav-links a:hover { color: var(--blue); border-bottom-color: var(--blue); }
+
+.nav-right { display: flex; align-items: center; gap: 16px; }
+.nav-phone {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem; font-weight: 700; color: var(--blue-dark);
+  text-decoration: none;
+}
+.nav-phone:hover { color: var(--blue-light); }
+.nav-btn {
+  background: var(--blue); color: white;
+  border: none; padding: 10px 22px; border-radius: 8px;
+  font-size: .85rem; font-weight: 600; cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: background .2s, transform .15s;
+  white-space: nowrap;
+}
+.nav-btn:hover { background: var(--blue-dark); transform: translateY(-1px); }
+
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.burger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: .3s; }
+
+/* ── HERO ── */
+#hero {
+  background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 50%, #1565C0 100%);
+  position: relative; overflow: hidden;
+  padding: 80px 24px;
+}
+#hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 80% 50%, rgba(0,188,212,.15), transparent),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+  position: relative; z-index: 2;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+  color: #fff; padding: 6px 16px; border-radius: 100px;
+  font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.hero-badge::before { content: '●'; color: #4DD0E1; font-size: .5rem; }
+
+.hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 900; color: white;
+  line-height: 1.1; margin-bottom: 16px;
+  text-transform: uppercase; letter-spacing: -.02em;
+}
+.hero-title span { color: #4DD0E1; }
+
+.hero-sub {
+  font-size: 1.05rem; color: rgba(255,255,255,.75);
+  line-height: 1.65; margin-bottom: 32px;
+}
+
+.hero-perks {
+  display: flex; flex-direction: column; gap: 12px; margin-bottom: 40px;
+}
+.hero-perk {
+  display: flex; align-items: center; gap: 12px;
+  color: white; font-size: .95rem; font-weight: 500;
+}
+.perk-check {
+  width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0;
+  background: rgba(77,208,225,.2); border: 1.5px solid #4DD0E1;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .7rem; color: #4DD0E1;
+}
+
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-hero-primary {
+  background: white; color: var(--blue-dark);
+  border: none; padding: 16px 36px; border-radius: 8px;
+  font-family: 'Montserrat', sans-serif; font-size: .95rem; font-weight: 700;
+  cursor: pointer; transition: .2s; text-decoration: none; display: inline-block;
+}
+.btn-hero-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,.2); }
+.btn-hero-outline {
+  background: transparent; color: white;
+  border: 2px solid rgba(255,255,255,.35); padding: 14px 32px; border-radius: 8px;
+  font-family: 'Montserrat', sans-serif; font-size: .95rem; font-weight: 600;
+  cursor: pointer; transition: .2s; text-decoration: none; display: inline-block;
+}
+.btn-hero-outline:hover { border-color: white; background: rgba(255,255,255,.08); }
+
+/* Hero visual */
+.hero-visual { display: flex; justify-content: center; align-items: center; }
+.hero-card {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 24px; padding: 40px;
+  backdrop-filter: blur(20px);
+  width: 100%; max-width: 400px;
+}
+.hero-card-title {
+  font-family: 'Montserrat', sans-serif;
+  color: white; font-size: 1rem; font-weight: 700;
+  margin-bottom: 24px; text-align: center;
+  text-transform: uppercase; letter-spacing: .05em;
+}
+.water-quality {
+  background: rgba(255,255,255,.06);
+  border-radius: 16px; padding: 24px; margin-bottom: 20px;
+}
+.wq-label { font-size: .75rem; color: rgba(255,255,255,.5); margin-bottom: 12px; text-transform: uppercase; letter-spacing: .06em; }
+.wq-bars { display: flex; flex-direction: column; gap: 10px; }
+.wq-bar { display: flex; align-items: center; gap: 10px; }
+.wq-name { font-size: .8rem; color: rgba(255,255,255,.7); width: 110px; }
+.wq-track { flex: 1; height: 6px; background: rgba(255,255,255,.1); border-radius: 3px; overflow: hidden; }
+.wq-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, #4DD0E1, #00BCD4); animation: fillBar 1.5s ease both; }
+@keyframes fillBar { from{width:0} }
+.wq-pct { font-size: .78rem; color: #4DD0E1; width: 36px; text-align: right; }
+
+.hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.hstat {
+  background: rgba(255,255,255,.08); border-radius: 12px; padding: 14px;
+  text-align: center; border: 1px solid rgba(255,255,255,.08);
+}
+.hstat-num { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; font-weight: 800; color: white; }
+.hstat-num span { color: #4DD0E1; }
+.hstat-label { font-size: .7rem; color: rgba(255,255,255,.5); margin-top: 3px; }
+
+/* ── TRUST BAR ── */
+.trust-bar {
+  background: var(--sky);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 24px;
+}
+.trust-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+}
+.trust-item { display: flex; align-items: center; gap: 14px; }
+.trust-icon {
+  width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+  background: white; border: 1.5px solid var(--border);
+  display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+  box-shadow: 0 2px 8px rgba(21,101,192,.08);
+}
+.trust-text strong { display: block; font-size: .9rem; font-weight: 700; color: var(--text); }
+.trust-text span { font-size: .8rem; color: var(--gray); }
+
+/* ── SECTION COMMONS ── */
+.section { padding: 80px 24px; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-head { text-align: center; margin-bottom: 56px; }
+.section-label {
+  display: inline-block;
+  font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--blue); background: var(--sky);
+  padding: 5px 16px; border-radius: 100px; margin-bottom: 14px;
+}
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800;
+  color: var(--text); line-height: 1.2; margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.section-sub { font-size: .95rem; color: var(--gray); line-height: 1.7; max-width: 520px; margin: 0 auto; }
+
+/* ── PRODUCTS ── */
+#catalog { background: var(--light); }
+.products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.product-card {
+  background: white; border-radius: 16px;
+  border: 1.5px solid var(--border);
+  overflow: hidden; transition: .25s;
+  display: flex; flex-direction: column;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(21,101,192,.12);
+  border-color: var(--blue-light);
+}
+.product-card.best {
+  border-color: var(--blue);
+  box-shadow: 0 8px 32px rgba(21,101,192,.15);
+}
+
+.product-img-wrap {
+  background: var(--sky);
+  height: 200px; display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.product-emoji { font-size: 5rem; filter: drop-shadow(0 8px 16px rgba(21,101,192,.2)); }
+.best-tag {
+  position: absolute; top: 14px; right: 14px;
+  background: var(--blue); color: white;
+  font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+  padding: 4px 12px; border-radius: 100px;
+}
+
+.product-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.product-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem; font-weight: 800; color: var(--text); margin-bottom: 6px;
+}
+.product-type {
+  font-size: .78rem; color: var(--blue); font-weight: 600;
+  text-transform: uppercase; letter-spacing: .05em; margin-bottom: 12px;
+}
+.product-desc { font-size: .87rem; color: var(--gray); line-height: 1.6; margin-bottom: 16px; }
+
+.product-specs { margin-bottom: 20px; }
+.spec {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 7px 0; border-bottom: 1px solid var(--border);
+  font-size: .82rem;
+}
+.spec:last-child { border-bottom: none; }
+.spec-label { color: var(--gray); }
+.spec-val { font-weight: 600; color: var(--text); }
+
+.product-footer { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border); }
+.product-price { margin-bottom: 14px; }
+.price-from { font-size: .78rem; color: var(--gray); }
+.price-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem; font-weight: 800; color: var(--blue-dark);
+}
+.price-currency { font-size: .9rem; color: var(--gray); margin-left: 4px; }
+
+.btn-product {
+  width: 100%; padding: 13px; border-radius: 8px;
+  font-family: 'Montserrat', sans-serif; font-size: .88rem; font-weight: 700;
+  cursor: pointer; transition: .2s; border: none; text-transform: uppercase; letter-spacing: .03em;
+}
+.btn-product-primary { background: var(--blue); color: white; }
+.btn-product-primary:hover { background: var(--blue-dark); }
+.btn-product-outline { background: transparent; color: var(--blue); border: 2px solid var(--border); }
+.btn-product-outline:hover { border-color: var(--blue); background: var(--sky); }
+
+/* ── WHY US ── */
+#why { background: white; }
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.why-card {
+  padding: 32px 28px; border-radius: 16px;
+  border: 1.5px solid var(--border);
+  transition: .25s; position: relative; overflow: hidden;
+}
+.why-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--blue), var(--accent));
+  opacity: 0; transition: .3s;
+}
+.why-card:hover { border-color: var(--blue-light); box-shadow: 0 12px 32px rgba(21,101,192,.08); }
+.why-card:hover::before { opacity: 1; }
+.why-icon { font-size: 2.2rem; margin-bottom: 16px; display: block; }
+.why-title { font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.why-desc { font-size: .88rem; color: var(--gray); line-height: 1.65; }
+
+/* ── HOW IT WORKS ── */
+#how { background: var(--light); }
+.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+.steps-grid::before {
+  content: '';
+  position: absolute; top: 28px; left: calc(12.5% + 14px); right: calc(12.5% + 14px);
+  height: 2px; background: var(--border); z-index: 0;
+}
+.step-item { text-align: center; padding: 0 16px; position: relative; z-index: 1; }
+.step-circle {
+  width: 56px; height: 56px; border-radius: 50%; margin: 0 auto 20px;
+  background: var(--blue); color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 800;
+  box-shadow: 0 4px 16px rgba(21,101,192,.3);
+}
+.step-title { font-family: 'Montserrat', sans-serif; font-size: .9rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.step-desc { font-size: .82rem; color: var(--gray); line-height: 1.6; }
+
+/* ── ABOUT ── */
+#about { background: white; }
+.about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.about-visual {
+  background: var(--sky); border-radius: 20px;
+  aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;
+  font-size: 6rem; border: 1.5px solid var(--border);
+  position: relative; overflow: hidden;
+}
+.about-visual::after {
+  content: 'ФОТО КОМАНДЫ';
+  position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+  font-family: 'Montserrat', sans-serif; font-size: .7rem; font-weight: 700;
+  color: var(--blue); letter-spacing: .1em; background: white;
+  padding: 4px 14px; border-radius: 100px; border: 1px solid var(--border);
+}
+.about-nums { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.about-num {
+  background: var(--sky); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border); text-align: center;
+}
+.about-num-val {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem; font-weight: 800; color: var(--blue-dark); display: block;
+}
+.about-num-label { font-size: .8rem; color: var(--gray); margin-top: 4px; }
+
+.about-text .section-title { text-align: left; }
+.about-text .section-sub { text-align: left; margin: 0; }
+.about-list { list-style: none; margin-top: 28px; display: flex; flex-direction: column; gap: 12px; }
+.about-list li {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: .9rem; color: var(--text); line-height: 1.5;
+}
+.about-list li::before {
+  content: '✓'; color: white; background: var(--green);
+  width: 20px; height: 20px; border-radius: 50%; display: flex;
+  align-items: center; justify-content: center; font-size: .65rem; font-weight: 700;
+  flex-shrink: 0; margin-top: 2px;
+}
+
+/* ── REVIEWS ── */
+#reviews { background: var(--light); }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.review-card {
+  background: white; border-radius: 16px; padding: 28px;
+  border: 1.5px solid var(--border); transition: .25s;
+}
+.review-card:hover { box-shadow: 0 12px 32px rgba(21,101,192,.08); border-color: rgba(21,101,192,.2); }
+.review-stars { color: #FFC107; font-size: 1rem; letter-spacing: 2px; margin-bottom: 14px; }
+.review-text { font-size: .9rem; color: var(--text); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+.review-author { display: flex; align-items: center; gap: 12px; }
+.review-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), var(--accent));
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 700; font-size: .9rem; flex-shrink: 0;
+}
+.review-name { font-size: .88rem; font-weight: 600; color: var(--text); }
+.review-city { font-size: .78rem; color: var(--gray); }
+
+/* ── FORM ── */
+#forma1 { background: var(--blue-dark); position: relative; overflow: hidden; }
+#forma1::before {
+  content: '';
+  position: absolute; top: -200px; right: -200px;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,188,212,.15), transparent 70%);
+}
+.form-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  padding: 80px 24px; position: relative; z-index: 2;
+}
+.form-left { color: white; }
+.form-left .section-label { background: rgba(255,255,255,.1); color: #4DD0E1; }
+.form-left .section-title { color: white; text-align: left; }
+.form-left .section-sub { color: rgba(255,255,255,.65); text-align: left; margin: 0 0 36px; }
+
+.form-perks { display: flex; flex-direction: column; gap: 16px; }
+.form-perk { display: flex; align-items: center; gap: 14px; }
+.form-perk-icon {
+  width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12);
+  display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+}
+.form-perk strong { display: block; font-size: .9rem; color: white; font-weight: 600; }
+.form-perk span { font-size: .8rem; color: rgba(255,255,255,.55); }
+
+.form-card {
+  background: white; border-radius: 20px; padding: 44px;
+  box-shadow: 0 40px 80px rgba(0,0,0,.2);
+}
+.form-card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem; font-weight: 800; color: var(--text); margin-bottom: 6px;
+}
+.form-card-sub { font-size: .88rem; color: var(--gray); margin-bottom: 28px; }
+
+.field { margin-bottom: 16px; }
+.field label { display: block; font-size: .8rem; font-weight: 600; color: var(--text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .03em; }
+.field input, .field select, .field textarea {
+  width: 100%; border: 1.5px solid var(--border); border-radius: 10px;
+  padding: 13px 16px; font-family: 'Inter', sans-serif; font-size: .95rem; color: var(--text);
+  background: var(--light); outline: none; transition: .2s; resize: vertical;
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  border-color: var(--blue); background: white; box-shadow: 0 0 0 3px rgba(21,101,192,.08);
+}
+.field select option { background: white; }
+.field textarea { min-height: 90px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.btn-submit {
+  width: 100%; padding: 16px; border-radius: 10px;
+  background: var(--blue); color: white;
+  border: none; font-family: 'Montserrat', sans-serif;
+  font-size: .95rem; font-weight: 800; cursor: pointer;
+  text-transform: uppercase; letter-spacing: .04em;
+  transition: .2s; margin-top: 8px;
+}
+.btn-submit:hover { background: var(--blue-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(21,101,192,.3); }
+
+.form-note { font-size: .75rem; color: var(--gray); text-align: center; margin-top: 10px; }
+
+.form-success { display: none; text-align: center; padding: 40px 0; }
+.success-icon { font-size: 3.5rem; margin-bottom: 16px; }
+.success-title { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+.success-sub { color: var(--gray); font-size: .9rem; }
+
+/* ── FOOTER ── */
+footer { background: #0a1628; padding: 60px 24px 28px; }
+.footer-inner { max-width: 1200px; margin: 0 auto; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.footer-brand .logo { color: white; margin-bottom: 14px; display: inline-flex; }
+.footer-brand p { font-size: .87rem; color: rgba(255,255,255,.45); line-height: 1.7; max-width: 260px; }
+.footer-col h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .75rem; font-weight: 700; color: rgba(255,255,255,.4);
+  text-transform: uppercase; letter-spacing: .08em; margin-bottom: 18px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col a { font-size: .87rem; color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s; }
+.footer-col a:hover { color: #4DD0E1; }
+.footer-divider { border: none; border-top: 1px solid rgba(255,255,255,.07); margin-bottom: 24px; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; }
+.footer-bottom p { font-size: .8rem; color: rgba(255,255,255,.3); }
+
+/* ── FLOAT CTA ── */
+.float-cta {
+  position: fixed; bottom: 28px; right: 28px; z-index: 300;
+  background: var(--blue); color: white;
+  border: none; border-radius: 100px; padding: 14px 24px;
+  font-family: 'Montserrat', sans-serif; font-size: .85rem; font-weight: 700;
+  cursor: pointer; box-shadow: 0 8px 28px rgba(21,101,192,.4);
+  display: flex; align-items: center; gap: 8px;
+  transition: .2s; text-decoration: none;
+  animation: popIn .5s .8s both;
+}
+.float-cta:hover { background: var(--blue-dark); transform: translateY(-3px); box-shadow: 0 12px 36px rgba(21,101,192,.5); }
+@keyframes popIn { from{opacity:0;transform:scale(.8) translateY(20px)} to{opacity:1;transform:scale(1) translateY(0)} }
+
+/* ── REVEAL ── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .55s ease, transform .55s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ── MOBILE ── */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+  .trust-inner { grid-template-columns: 1fr 1fr; }
+  .products-grid { grid-template-columns: 1fr 1fr; }
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .steps-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .steps-grid::before { display: none; }
+  .about-inner { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr 1fr; }
+  .form-inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; position: fixed; top: 72px; inset-x: 0; bottom: 0; background: white; flex-direction: column; gap: 0; padding: 16px 24px; z-index: 200; overflow-y: auto; }
+  .nav-links.open { display: flex; }
+  .nav-links li { border-bottom: 1px solid var(--border); }
+  .nav-links a { display: block; padding: 14px 0; font-size: 1rem; color: var(--text); }
+  .nav-phone { display: none; }
+  .nav-btn { display: none; }
+  .burger { display: flex; }
+  .products-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .trust-inner { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-card { padding: 28px 20px; }
+  .float-cta { bottom: 16px; right: 16px; padding: 12px 18px; font-size: .8rem; }
+  #hero { padding: 60px 20px; }
+  .section { padding: 60px 20px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  Бесплатная доставка по Астане · Установка за <span>1 день</span> · Гарантия <span>2 года</span>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">💧</div>
+      Аква<span>Чист</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#catalog">Каталог</a></li>
+      <li><a href="#why">Почему мы</a></li>
+      <li><a href="#how">Как работает</a></li>
+      <li><a href="#about">О компании</a></li>
+      <li><a href="#reviews">Отзывы</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+77000000000" class="nav-phone">+7 (700) 000-00-00</a>
+      <button class="nav-btn" onclick="scrollToForm()">Заказать</button>
+    </div>
+    <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">Астана · Сертифицированный продукт</div>
+      <h1 class="hero-title">Фильтры<br>для <span>воды</span></h1>
+      <p class="hero-sub">Продажа и установка фильтров в Астане. Очищаем воду от хлора, железа, накипи и бактерий. Вода чистая с первого дня.</p>
+      <div class="hero-perks">
+        <div class="hero-perk"><div class="perk-check">✓</div>Гарантия 2 года на всё оборудование</div>
+        <div class="hero-perk"><div class="perk-check">✓</div>Установка за 1 день — без грязи и пыли</div>
+        <div class="hero-perk"><div class="perk-check">✓</div>Бесплатное обслуживание фильтров</div>
+        <div class="hero-perk"><div class="perk-check">✓</div>Бесплатная проверка качества воды</div>
+      </div>
+      <div class="hero-actions">
+        <button class="btn-hero-primary" onclick="scrollToForm()">Получить консультацию</button>
+        <a href="#catalog" class="btn-hero-outline">Смотреть каталог</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-title">Степень очистки воды</div>
+        <div class="water-quality">
+          <div class="wq-label">Удаляем примеси</div>
+          <div class="wq-bars">
+            <div class="wq-bar">
+              <span class="wq-name">Хлор</span>
+              <div class="wq-track"><div class="wq-fill" style="width:99%"></div></div>
+              <span class="wq-pct">99%</span>
+            </div>
+            <div class="wq-bar">
+              <span class="wq-name">Железо</span>
+              <div class="wq-track"><div class="wq-fill" style="width:98%;animation-delay:.2s"></div></div>
+              <span class="wq-pct">98%</span>
+            </div>
+            <div class="wq-bar">
+              <span class="wq-name">Бактерии</span>
+              <div class="wq-track"><div class="wq-fill" style="width:99.9%;animation-delay:.3s"></div></div>
+              <span class="wq-pct">99.9%</span>
+            </div>
+            <div class="wq-bar">
+              <span class="wq-name">Тяжёлые металлы</span>
+              <div class="wq-track"><div class="wq-fill" style="width:97%;animation-delay:.4s"></div></div>
+              <span class="wq-pct">97%</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="hstat"><div class="hstat-num">2<span>г</span></div><div class="hstat-label">Гарантия</div></div>
+          <div class="hstat"><div class="hstat-num">1<span>д</span></div><div class="hstat-label">Монтаж</div></div>
+          <div class="hstat"><div class="hstat-num">0<span>₸</span></div><div class="hstat-label">Обслуж.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner reveal">
+    <div class="trust-item">
+      <div class="trust-icon">🏆</div>
+      <div class="trust-text"><strong>Гарантия 2 года</strong><span>На всё оборудование</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">⚡</div>
+      <div class="trust-text"><strong>Установка за 1 день</strong><span>Быстро и аккуратно</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🔧</div>
+      <div class="trust-text"><strong>Бесплатный сервис</strong><span>Платите только за картриджи</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🧪</div>
+      <div class="trust-text"><strong>Анализ воды бесплатно</strong><span>Тест-набор в подарок</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- CATALOG -->
+<section class="section" id="catalog">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-label">Каталог продукции</div>
+      <h2 class="section-title">Выберите фильтр</h2>
+      <p class="section-sub">Подберём систему под ваши задачи и бюджет. Все фильтры сертифицированы.</p>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card reveal">
+        <div class="product-img-wrap">
+          <div class="product-emoji">🚰</div>
+        </div>
+        <div class="product-body">
+          <div class="product-type">Настольный</div>
+          <div class="product-name">АкваЧист Старт</div>
+          <p class="product-desc">Компактный настольный фильтр для базовой очистки водопроводной воды. Не требует установки.</p>
+          <div class="product-specs">
+            <div class="spec"><span class="spec-label">Ступени очистки</span><span class="spec-val">3 ступени</span></div>
+            <div class="spec"><span class="spec-label">Ресурс картриджа</span><span class="spec-val">6 месяцев</span></div>
+            <div class="spec"><span class="spec-label">Объём бака</span><span class="spec-val">3.5 литра</span></div>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">
+              <div class="price-from">от</div>
+              <span class="price-num">12 900</span><span class="price-currency">₸</span>
+            </div>
+            <button class="btn-product btn-product-outline" onclick="selectProduct('АкваЧист Старт')">Узнать подробнее</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card best reveal">
+        <div class="product-img-wrap">
+          <div class="product-emoji">💧</div>
+          <div class="best-tag">Хит продаж</div>
+        </div>
+        <div class="product-body">
+          <div class="product-type">Обратный осмос</div>
+          <div class="product-name">АкваЧист Осмо 5</div>
+          <p class="product-desc">Система обратного осмоса под мойку. 5 ступеней очистки, накопительный бак 8 литров.</p>
+          <div class="product-specs">
+            <div class="spec"><span class="spec-label">Ступени очистки</span><span class="spec-val">5 ступеней</span></div>
+            <div class="spec"><span class="spec-label">Производительность</span><span class="spec-val">150 л/сутки</span></div>
+            <div class="spec"><span class="spec-label">Бак накопительный</span><span class="spec-val">8 литров</span></div>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">
+              <div class="price-from">от</div>
+              <span class="price-num">45 000</span><span class="price-currency">₸</span>
+            </div>
+            <button class="btn-product btn-product-primary" onclick="selectProduct('АкваЧист Осмо 5')">Заказать</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img-wrap">
+          <div class="product-emoji">🏠</div>
+        </div>
+        <div class="product-body">
+          <div class="product-type">Обратный осмос Pro</div>
+          <div class="product-name">АкваЧист Осмо 7</div>
+          <p class="product-desc">Профессиональная система с минерализатором и УФ-лампой. Вода как в горном роднике.</p>
+          <div class="product-specs">
+            <div class="spec"><span class="spec-label">Ступени очистки</span><span class="spec-val">7 ступеней</span></div>
+            <div class="spec"><span class="spec-label">Производительность</span><span class="spec-val">200 л/сутки</span></div>
+            <div class="spec"><span class="spec-label">УФ-стерилизатор</span><span class="spec-val">Включён</span></div>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">
+              <div class="price-from">от</div>
+              <span class="price-num">78 000</span><span class="price-currency">₸</span>
+            </div>
+            <button class="btn-product btn-product-outline" onclick="selectProduct('АкваЧист Осмо 7')">Узнать подробнее</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img-wrap">
+          <div class="product-emoji">🔩</div>
+        </div>
+        <div class="product-body">
+          <div class="product-type">Магистральный</div>
+          <div class="product-name">АкваЧист Магистраль</div>
+          <p class="product-desc">Фильтрует всю воду в квартире. Защищает трубы, технику и бытовые приборы от накипи.</p>
+          <div class="product-specs">
+            <div class="spec"><span class="spec-label">Производительность</span><span class="spec-val">1500 л/час</span></div>
+            <div class="spec"><span class="spec-label">Ресурс картриджа</span><span class="spec-val">12 месяцев</span></div>
+            <div class="spec"><span class="spec-label">Монтаж</span><span class="spec-val">Включён</span></div>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">
+              <div class="price-from">от</div>
+              <span class="price-num">35 000</span><span class="price-currency">₸</span>
+            </div>
+            <button class="btn-product btn-product-outline" onclick="selectProduct('АкваЧист Магистраль')">Узнать подробнее</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img-wrap">
+          <div class="product-emoji">🏢</div>
+        </div>
+        <div class="product-body">
+          <div class="product-type">Для офиса</div>
+          <div class="product-name">АкваЧист Офис</div>
+          <p class="product-desc">Проточный фильтр для офисов и коммерческих помещений. Высокая производительность.</p>
+          <div class="product-specs">
+            <div class="spec"><span class="spec-label">Производительность</span><span class="spec-val">500 л/сутки</span></div>
+            <div class="spec"><span class="spec-label">Подключение</span><span class="spec-val">К кулеру/крану</span></div>
+            <div class="spec"><span class="spec-label">Гарантия</span><span class="spec-val">2 года</span></div>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">
+              <div class="price-from">от</div>
+              <span class="price-num">95 000</span><span class="price-currency">₸</span>
+            </div>
+            <button class="btn-product btn-product-outline" onclick="selectProduct('АкваЧист Офис')">Узнать подробнее</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img-wrap">
+          <div class="product-emoji">🔄</div>
+        </div>
+        <div class="product-body">
+          <div class="product-type">Замена картриджей</div>
+          <div class="product-name">Сервис и обслуживание</div>
+          <p class="product-desc">Замена картриджей с выездом на дом. Оригинальные расходники. Быстро и без лишних хлопот.</p>
+          <div class="product-specs">
+            <div class="spec"><span class="spec-label">Выезд мастера</span><span class="spec-val">Бесплатно</span></div>
+            <div class="spec"><span class="spec-label">Время работ</span><span class="spec-val">30-40 минут</span></div>
+            <div class="spec"><span class="spec-label">Гарантия на работу</span><span class="spec-val">3 месяца</span></div>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">
+              <div class="price-from">от</div>
+              <span class="price-num">8 500</span><span class="price-currency">₸</span>
+            </div>
+            <button class="btn-product btn-product-primary" onclick="selectProduct('Сервис и обслуживание')">Записаться</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section" id="why">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-label">Почему выбирают нас</div>
+      <h2 class="section-title">Наши преимущества</h2>
+      <p class="section-sub">Мы работаем ради результата, а не продажи. Ваше доверие важнее разового заказа.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <span class="why-icon">🏆</span>
+        <div class="why-title">Сертифицированная продукция</div>
+        <p class="why-desc">Все фильтры имеют сертификаты соответствия и прошли независимую лабораторную проверку. Только проверенные бренды.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">⚡</span>
+        <div class="why-title">Установка за 1 день</div>
+        <p class="why-desc">Наши мастера приедут в удобное для вас время и установят систему за 1-2 часа. Без шума, пыли и мусора.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">🔧</span>
+        <div class="why-title">Бесплатное обслуживание</div>
+        <p class="why-desc">Консультации и выезд мастера — бесплатно. Вы платите только за расходные материалы по себестоимости.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">💰</span>
+        <div class="why-title">Рассрочка без переплат</div>
+        <p class="why-desc">Оформим рассрочку на 6 или 12 месяцев прямо на месте. Без банков, без процентов, без лишних документов.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">🛡️</span>
+        <div class="why-title">Гарантия 2 года</div>
+        <p class="why-desc">Полная гарантия на оборудование и работу. При любой неисправности — бесплатный ремонт или замена.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">📞</span>
+        <div class="why-title">Поддержка 24/7</div>
+        <p class="why-desc">Ответим на звонок в любое время. Решаем большинство вопросов дистанционно без выезда мастера.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-label">Как мы работаем</div>
+      <h2 class="section-title">4 простых шага</h2>
+      <p class="section-sub">От заявки до чистой воды — один день.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-item reveal">
+        <div class="step-circle">1</div>
+        <div class="step-title">Оставьте заявку</div>
+        <p class="step-desc">Заполните форму или позвоните. Перезвоним в течение 30 минут.</p>
+      </div>
+      <div class="step-item reveal">
+        <div class="step-circle">2</div>
+        <div class="step-title">Консультация</div>
+        <p class="step-desc">Подберём лучший фильтр под ваш тип воды и бюджет. Бесплатно.</p>
+      </div>
+      <div class="step-item reveal">
+        <div class="step-circle">3</div>
+        <div class="step-title">Выезд и монтаж</div>
+        <p class="step-desc">Мастер приедет в удобное время и установит систему за 1-2 часа.</p>
+      </div>
+      <div class="step-item reveal">
+        <div class="step-circle">4</div>
+        <div class="step-title">Чистая вода</div>
+        <p class="step-desc">Пьёте чистую воду. Обслуживаем бесплатно весь срок гарантии.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-inner about-inner">
+    <div class="about-visual reveal">🏢</div>
+    <div class="about-text reveal">
+      <div class="section-label">О компании</div>
+      <h2 class="section-title">АкваЧист — ваш надёжный партнёр</h2>
+      <p class="section-sub">Мы занимаемся очисткой воды в Астане уже более 8 лет. За это время установили тысячи систем фильтрации в квартирах, домах и офисах. Нам доверяют — потому что мы не обещаем лишнего, а делаем результат.</p>
+      <ul class="about-list">
+        <li>Работаем только с сертифицированным оборудованием ведущих брендов</li>
+        <li>Штат профессиональных мастеров с опытом от 5 лет</li>
+        <li>Собственный склад запчастей и картриджей в Астане</li>
+        <li>Полная прозрачность цен — никаких скрытых платежей</li>
+        <li>Реальные отзывы клиентов на 2ГИС и Google</li>
+      </ul>
+      <div class="about-nums">
+        <div class="about-num"><span class="about-num-val">3 000+</span><div class="about-num-label">Установленных систем</div></div>
+        <div class="about-num"><span class="about-num-val">8 лет</span><div class="about-num-label">Работаем в Астане</div></div>
+        <div class="about-num"><span class="about-num-val">98%</span><div class="about-num-label">Довольных клиентов</div></div>
+        <div class="about-num"><span class="about-num-val">24/7</span><div class="about-num-label">Поддержка</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section" id="reviews">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-label">Отзывы клиентов</div>
+      <h2 class="section-title">Что говорят о нас</h2>
+      <p class="section-sub">Реальные отзывы реальных людей из Астаны.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">«Поставили осмос месяц назад. Вкус воды изменился кардинально — теперь пьём прямо из-под крана. Мастер пришёл вовремя, установил аккуратно. Очень доволен!»</p>
+        <div class="review-author">
+          <div class="review-avatar">АС</div>
+          <div><div class="review-name">Аслан Сейткали</div><div class="review-city">Астана, р-н Есиль</div></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">«Заказала магистральный фильтр для всей квартиры. Накипь на чайнике исчезла через 2 недели! Стиральная машина тоже скажет спасибо. Ребята профессионалы.»</p>
+        <div class="review-author">
+          <div class="review-avatar">ГН</div>
+          <div><div class="review-name">Гульнара Нурова</div><div class="review-city">Астана, Байконур</div></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">«Обратился насчёт замены картриджей на старом фильтре. Приехали быстро, заменили, ещё и проверили всю систему. Цены адекватные, работают честно. Рекомендую.»</p>
+        <div class="review-author">
+          <div class="review-avatar">ДМ</div>
+          <div><div class="review-name">Данияр Муратов</div><div class="review-city">Астана, Алматы р-н</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="forma1">
+  <div class="form-inner">
+    <div class="form-left">
+      <div class="section-label">Консультация</div>
+      <h2 class="section-title" style="color:white;text-align:left">Оставьте заявку</h2>
+      <p class="section-sub">Наш специалист перезвонит в течение 30 минут и бесплатно подберёт лучший фильтр для вашей воды.</p>
+      <div class="form-perks">
+        <div class="form-perk">
+          <div class="form-perk-icon">⚡</div>
+          <div><strong>Перезвоним за 30 минут</strong><span>В рабочее время — ещё быстрее</span></div>
+        </div>
+        <div class="form-perk">
+          <div class="form-perk-icon">🎁</div>
+          <div><strong>Бесплатный тест воды</strong><span>Анализ качества воды в подарок</span></div>
+        </div>
+        <div class="form-perk">
+          <div class="form-perk-icon">🚚</div>
+          <div><strong>Бесплатная доставка</strong><span>По всей Астане</span></div>
+        </div>
+        <div class="form-perk">
+          <div class="form-perk-icon">💳</div>
+          <div><strong>Рассрочка 0%</strong><span>На 6 и 12 месяцев</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <div id="formBody">
+        <div class="form-card-title">Получить консультацию</div>
+        <div class="form-card-sub">Заполните форму — ответим быстро</div>
+        <form id="mainForm" onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="field">
+              <label>Ваше имя *</label>
+              <input type="text" id="fname" placeholder="Иван Иванов" required>
+            </div>
+            <div class="field">
+              <label>Телефон *</label>
+              <input type="tel" id="fphone" placeholder="+7 (___) ___-__-__" required>
+            </div>
+          </div>
+          <div class="field">
+            <label>Интересующий продукт</label>
+            <select id="fproduct">
+              <option value="">Не определился — помогите выбрать</option>
+              <option>АкваЧист Старт — от 12 900 ₸</option>
+              <option>АкваЧист Осмо 5 — от 45 000 ₸</option>
+              <option>АкваЧист Осмо 7 — от 78 000 ₸</option>
+              <option>АкваЧист Магистраль — от 35 000 ₸</option>
+              <option>АкваЧист Офис — от 95 000 ₸</option>
+              <option>Замена картриджей / Сервис</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Тип жилья</label>
+            <select id="ftype">
+              <option value="">Выберите</option>
+              <option>Квартира</option>
+              <option>Частный дом / коттедж</option>
+              <option>Офис</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Комментарий</label>
+            <textarea id="fcomment" placeholder="Есть вопросы? Напишите — ответим на всё..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="fsubmit">Отправить заявку →</button>
+          <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+        </form>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">✅</div>
+        <div class="success-title">Заявка принята!</div>
+        <p class="success-sub">Перезвоним вам в течение 30 минут.<br>Спасибо, что выбрали АкваЧист!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-icon">💧</div>
+          Аква<span>Чист</span>
+        </a>
+        <p>Продажа и установка фильтров для воды в Астане. Работаем с 2016 года. Гарантия качества.</p>
+      </div>
+      <div class="footer-col">
+        <h6>Каталог</h6>
+        <ul>
+          <li><a href="#catalog">Настольные фильтры</a></li>
+          <li><a href="#catalog">Обратный осмос</a></li>
+          <li><a href="#catalog">Магистральные</a></li>
+          <li><a href="#catalog">Для офиса</a></li>
+          <li><a href="#catalog">Замена картриджей</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Компания</h6>
+        <ul>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#why">Преимущества</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#how">Как работаем</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Контакты</h6>
+        <ul>
+          <li><a href="tel:+77000000000">+7 (700) 000-00-00</a></li>
+          <li><a href="mailto:info@akvachist.kz">info@akvachist.kz</a></li>
+          <li><a href="#">г. Астана</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p>© 2025 АкваЧист. Все права защищены.</p>
+      <p>Фильтры для воды в Астане</p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOAT CTA -->
+<a href="#forma1" class="float-cta">📞 Заказать звонок</a>
+
+<script>
+// NAV SCROLL EFFECT
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').style.boxShadow =
+    window.scrollY > 40 ? '0 4px 28px rgba(21,101,192,.14)' : '0 2px 20px rgba(21,101,192,.08)';
+});
+
+// MOBILE MENU
+function toggleMenu() {
+  const links = document.getElementById('navLinks');
+  const burger = document.getElementById('burger');
+  const open = links.classList.toggle('open');
+  const spans = burger.querySelectorAll('span');
+  if (open) {
+    spans[0].style.transform = 'rotate(45deg) translate(5px,5px)';
+    spans[1].style.opacity = '0';
+    spans[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
+  } else {
+    spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+  }
+}
+document.querySelectorAll('.nav-links a').forEach(a =>
+  a.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+    document.querySelectorAll('#burger span').forEach(s => { s.style.transform=''; s.style.opacity=''; });
+  })
+);
+
+// REVEAL ON SCROLL
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 70);
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// PHONE MASK
+const phoneInput = document.getElementById('fphone');
+if (phoneInput) {
+  phoneInput.addEventListener('input', function() {
+    let v = this.value.replace(/\D/g, '');
+    if (v.startsWith('7') || v.startsWith('8')) v = v.slice(1);
+    let f = '+7';
+    if (v.length > 0) f += ' (' + v.slice(0,3);
+    if (v.length >= 3) f += ') ' + v.slice(3,6);
+    if (v.length >= 6) f += '-' + v.slice(6,8);
+    if (v.length >= 8) f += '-' + v.slice(8,10);
+    this.value = f;
+  });
+}
+
+// SELECT PRODUCT
+function selectProduct(name) {
+  const sel = document.getElementById('fproduct');
+  if (sel) {
+    for (let i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].text.startsWith(name)) { sel.selectedIndex = i; break; }
+    }
+  }
+  scrollToForm();
+}
+
+function scrollToForm() {
+  document.getElementById('forma1').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// FORM SUBMIT
+function submitForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('fsubmit');
+  btn.disabled = true;
+  btn.textContent = 'Отправляем...';
+  setTimeout(() => {
+    document.getElementById('formBody').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }, 1400);
+}
+
+// SMOOTH SCROLL
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+</script>
+</body>
+</html>
